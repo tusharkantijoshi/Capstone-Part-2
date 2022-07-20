@@ -100,6 +100,9 @@ export default function SignUp(props) {
                   id="firstName"
                   label="First Name"
                   autoFocus
+                  onClick={() => {
+                    setfirstName("anoop");
+                  }}
                 />
               </Grid>
               <Grid item xs={12}>
@@ -111,6 +114,9 @@ export default function SignUp(props) {
                   label="Last Name"
                   name="lastName"
                   autoComplete="lname"
+                  onClick={() => {
+                    setlastName("chandra");
+                  }}
                 />
               </Grid>
               <Grid item xs={12}>
@@ -122,6 +128,9 @@ export default function SignUp(props) {
                   label="Email Address"
                   name="email"
                   autoComplete="email"
+                  onClick={() => {
+                    setEmail("chandra");
+                  }}
                 />
               </Grid>
               <Grid item xs={12}>
@@ -134,6 +143,9 @@ export default function SignUp(props) {
                   type="password"
                   id="password"
                   autoComplete="current-password"
+                  onClick={() => {
+                    setPassword("chandra");
+                  }}
                 />
               </Grid>
               <Grid item xs={12}>
