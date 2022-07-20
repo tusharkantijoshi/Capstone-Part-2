@@ -1,5 +1,3 @@
-//import AppBar from '@material-ui/core/AppBar';
-
 import React from "react";
 import { fade, makeStyles } from "@material-ui/core/styles";
 import AppBar from "@material-ui/core/AppBar";
@@ -159,7 +157,7 @@ export default function PrimarySearchAppBar() {
   return (
     <div className={classes.grow}>
       <AppBar position="static">
-        <Toolbar style={{ display: "flex", justifyContent: "space-around" }}>
+        <Toolbar style={{ display: "flex", justifyContent: "space-between" }}>
           <h3>UpGrad E-Shop</h3>
           <IconButton
             edge="start"
@@ -170,12 +168,14 @@ export default function PrimarySearchAppBar() {
 
           {!authService.isLoggedIn() && (
             <>
-              <NavLink className={classes.link} to="/login">
-                Login
-              </NavLink>
-              <NavLink className={classes.link} to="/signup">
-                Sign Up
-              </NavLink>
+              <div>
+                <NavLink className={classes.link} to="/login">
+                  Login
+                </NavLink>
+                <NavLink className={classes.link} to="/signup">
+                  Sign Up
+                </NavLink>
+              </div>
             </>
           )}
           {authService.isLoggedIn() && (
@@ -191,21 +191,15 @@ export default function PrimarySearchAppBar() {
                   inputProps={{ "aria-label": "search" }}
                 />
               </div>
-
-              <Button type="search">Search</Button>
-              <NavLink className={classes.link} to="/home">
-                Home
-              </NavLink>
-              <NavLink className={classes.link} to="/add-product">
-                AddProduct
-              </NavLink>
-            </>
-          )}
-          {authService.isLoggedIn() && authService.isAdmin() && (
-            <>
-              <NavLink className={classes.link} to="/add-vehicle">
-                Add Vehicle
-              </NavLink>
+              <div>
+                <Button type="search">Search</Button>
+                <NavLink className={classes.link} to="/home">
+                  Home
+                </NavLink>
+                <NavLink className={classes.link} to="/add-product">
+                  AddProduct
+                </NavLink>
+              </div>
             </>
           )}
 
